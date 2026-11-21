@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "host": "fixture",
+  "machine": {
+    "vendor": "Dell Inc.",
+    "product": "OptiPlex 9020",
+    "board_vendor": "Dell Inc.",
+    "board_name": "0PC5F7",
+    "bios_version": "1.0",
+    "chassis_type": 3,
+    "form_factor": "desktop",
+    "battery": false,
+    "virtual": null,
+    "firmware": "uefi",
+    "secure_boot": false,
+    "memory_gb": 16
+  },
+  "cpu": {
+    "vendor": "intel",
+    "name": "Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz",
+    "family": 6,
+    "model": 60,
+    "stepping": 3,
+    "cores": 4,
+    "threads": 8,
+    "flags": [
+      "avx",
+      "avx2",
+      "sse4_1",
+      "sse4_2"
+    ],
+    "cfg_lock": false
+  },
+  "pci": [
+    {
+      "slot": "0000:00:02.0",
+      "vendor": "8086",
+      "device": "0412",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "Intel Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x2,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:01:00.0",
+      "vendor": "10de",
+      "device": "2184",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "NVIDIA TU116 [GeForce GTX 1660]",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:19.0",
+      "vendor": "8086",
+      "device": "153a",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "020000",
+      "kind": "ethernet",
+      "name": "Intel Ethernet Connection I217-LM",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x19,0x0)",
+      "boot_vga": false
+    }
+  ],
+  "usb": [],
+  "usb_ports": {},
+  "thunderbolt": false,
+  "audio_codecs": [
+    {
+      "card": 0,
+      "name": "Realtek ALC280",
+      "vendor_id": "0x10ec0280",
+      "applealc": "ALC280"
+    }
+  ],
+  "input": {
+    "ps2": false,
+    "i2c_hid": false
+  },
+  "acpi": {
+    "dsdt_available": false,
+    "names": []
+  },
+  "nics": []
+}

@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "host": "fixture",
+  "machine": {
+    "vendor": "Micro-Star",
+    "product": "MAG B550 TOMAHAWK",
+    "board_vendor": "Micro-Star",
+    "board_name": "MAG B550 TOMAHAWK (MS-7C91)",
+    "bios_version": "1.0",
+    "chassis_type": 3,
+    "form_factor": "desktop",
+    "battery": false,
+    "virtual": null,
+    "firmware": "uefi",
+    "secure_boot": false,
+    "memory_gb": 16
+  },
+  "cpu": {
+    "vendor": "amd",
+    "name": "AMD Ryzen 7 5800X 8-Core Processor",
+    "family": 25,
+    "model": 33,
+    "stepping": 0,
+    "cores": 8,
+    "threads": 16,
+    "flags": [
+      "avx",
+      "avx2",
+      "sse4_1",
+      "sse4_2"
+    ],
+    "cfg_lock": null
+  },
+  "pci": [
+    {
+      "slot": "0000:2d:00.0",
+      "vendor": "1002",
+      "device": "67df",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "AMD Radeon RX 580",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:14.3",
+      "vendor": "1022",
+      "device": "790e",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "060100",
+      "kind": "isa",
+      "name": "AMD FCH LPC Bridge",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x14,0x3)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:2a:00.0",
+      "vendor": "10ec",
+      "device": "8168",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "020000",
+      "kind": "ethernet",
+      "name": "Realtek RTL8111",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1,0x2)/Pci(0x0,0x0)",
+      "boot_vga": false
+    }
+  ],
+  "usb": [],
+  "usb_ports": {},
+  "thunderbolt": false,
+  "audio_codecs": [
+    {
+      "card": 0,
+      "name": "Realtek ALC1220",
+      "vendor_id": "0x10ec01220",
+      "applealc": "ALC1220"
+    }
+  ],
+  "input": {
+    "ps2": false,
+    "i2c_hid": false
+  },
+  "acpi": {
+    "dsdt_available": false,
+    "names": []
+  },
+  "nics": []
+}

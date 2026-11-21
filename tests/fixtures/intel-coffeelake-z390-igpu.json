@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "host": "fixture",
+  "machine": {
+    "vendor": "Gigabyte",
+    "product": "Z390 AORUS PRO",
+    "board_vendor": "Gigabyte",
+    "board_name": "Z390 AORUS PRO",
+    "bios_version": "1.0",
+    "chassis_type": 3,
+    "form_factor": "desktop",
+    "battery": false,
+    "virtual": null,
+    "firmware": "uefi",
+    "secure_boot": false,
+    "memory_gb": 16
+  },
+  "cpu": {
+    "vendor": "intel",
+    "name": "Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz",
+    "family": 6,
+    "model": 158,
+    "stepping": 10,
+    "cores": 6,
+    "threads": 12,
+    "flags": [
+      "avx",
+      "avx2",
+      "sse4_1",
+      "sse4_2"
+    ],
+    "cfg_lock": true
+  },
+  "pci": [
+    {
+      "slot": "0000:00:02.0",
+      "vendor": "8086",
+      "device": "3e92",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "Intel UHD Graphics 630",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x2,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:1f.0",
+      "vendor": "8086",
+      "device": "a305",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "060100",
+      "kind": "isa",
+      "name": "Intel Z390 Chipset LPC/eSPI Controller",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1f,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:1f.6",
+      "vendor": "8086",
+      "device": "15bc",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "020000",
+      "kind": "ethernet",
+      "name": "Intel Ethernet Connection (7) I219-V",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1f,0x6)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:01:00.0",
+      "vendor": "144d",
+      "device": "a804",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "010802",
+      "kind": "nvme",
+      "name": "Samsung 970 EVO",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1d,0x0)/Pci(0x0,0x0)",
+      "boot_vga": false
+    }
+  ],
+  "usb": [],
+  "usb_ports": {},
+  "thunderbolt": false,
+  "audio_codecs": [
+    {
+      "card": 0,
+      "name": "Realtek ALC1220",
+      "vendor_id": "0x10ec01220",
+      "applealc": "ALC1220"
+    }
+  ],
+  "input": {
+    "ps2": false,
+    "i2c_hid": false
+  },
+  "acpi": {
+    "dsdt_available": true,
+    "names": [
+      "AWAC",
+      "STAS",
+      "LPCB",
+      "PR00"
+    ]
+  },
+  "nics": [
+    {
+      "iface": "eno1",
+      "mac": "aa:bb:cc:dd:ee:01",
+      "pci_slot": "0000:00:1f.6",
+      "wireless": false
+    }
+  ]
+}

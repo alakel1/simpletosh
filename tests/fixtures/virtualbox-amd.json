@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "host": "fixture",
+  "machine": {
+    "vendor": "innotek GmbH",
+    "product": "VirtualBox",
+    "board_vendor": "innotek GmbH",
+    "board_name": "VirtualBox",
+    "bios_version": "1.0",
+    "chassis_type": 1,
+    "form_factor": "desktop",
+    "battery": false,
+    "virtual": "virtualbox",
+    "firmware": "uefi",
+    "secure_boot": false,
+    "memory_gb": 16
+  },
+  "cpu": {
+    "vendor": "amd",
+    "name": "AMD Ryzen 5 1400 Quad-Core Processor",
+    "family": 23,
+    "model": 1,
+    "stepping": 1,
+    "cores": 4,
+    "threads": 8,
+    "flags": [
+      "avx",
+      "avx2",
+      "sse4_1",
+      "sse4_2",
+      "hypervisor"
+    ],
+    "cfg_lock": null
+  },
+  "pci": [
+    {
+      "slot": "0000:00:02.0",
+      "vendor": "15ad",
+      "device": "0405",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "VMware SVGA II Adapter",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x2,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:03.0",
+      "vendor": "8086",
+      "device": "100f",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "020000",
+      "kind": "ethernet",
+      "name": "Intel 82545EM Gigabit Ethernet",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x3,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:1f.2",
+      "vendor": "8086",
+      "device": "2829",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "010601",
+      "kind": "sata",
+      "name": "Intel 82801HM AHCI",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1f,0x2)",
+      "boot_vga": false
+    }
+  ],
+  "usb": [],
+  "usb_ports": {},
+  "thunderbolt": false,
+  "audio_codecs": [],
+  "input": {
+    "ps2": false,
+    "i2c_hid": false
+  },
+  "acpi": {
+    "dsdt_available": false,
+    "names": []
+  },
+  "nics": []
+}

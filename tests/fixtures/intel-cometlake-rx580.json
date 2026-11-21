@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "host": "fixture",
+  "machine": {
+    "vendor": "ASUS",
+    "product": "PRIME B460-PLUS",
+    "board_vendor": "ASUS",
+    "board_name": "PRIME B460-PLUS",
+    "bios_version": "1.0",
+    "chassis_type": 3,
+    "form_factor": "desktop",
+    "battery": false,
+    "virtual": null,
+    "firmware": "uefi",
+    "secure_boot": false,
+    "memory_gb": 16
+  },
+  "cpu": {
+    "vendor": "intel",
+    "name": "Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz",
+    "family": 6,
+    "model": 165,
+    "stepping": 3,
+    "cores": 6,
+    "threads": 12,
+    "flags": [
+      "avx",
+      "avx2",
+      "sse4_1",
+      "sse4_2"
+    ],
+    "cfg_lock": null
+  },
+  "pci": [
+    {
+      "slot": "0000:00:02.0",
+      "vendor": "8086",
+      "device": "9bc8",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "Intel UHD Graphics 630",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x2,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:01:00.0",
+      "vendor": "1002",
+      "device": "67df",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "AMD Ellesmere [Radeon RX 470/480/570/580]",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:1f.0",
+      "vendor": "8086",
+      "device": "a3c8",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "060100",
+      "kind": "isa",
+      "name": "Intel B460 Chipset LPC",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1f,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:03:00.0",
+      "vendor": "10ec",
+      "device": "8125",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "020000",
+      "kind": "ethernet",
+      "name": "Realtek RTL8125 2.5GbE",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)",
+      "boot_vga": false
+    }
+  ],
+  "usb": [],
+  "usb_ports": {},
+  "thunderbolt": false,
+  "audio_codecs": [
+    {
+      "card": 0,
+      "name": "Realtek ALC887",
+      "vendor_id": "0x10ec0887",
+      "applealc": "ALC887"
+    }
+  ],
+  "input": {
+    "ps2": false,
+    "i2c_hid": false
+  },
+  "acpi": {
+    "dsdt_available": false,
+    "names": []
+  },
+  "nics": []
+}

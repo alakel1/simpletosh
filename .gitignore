@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+/build/
+/out/
+*.iso
+*.img
+*.qcow2
+*.vdi
+*.fd
+*.log
+.vscode/
+.idea/

@@ -1,0 +1,70 @@
+# Packages installed in the live image (Debian trixie, --no-install-recommends)
+
+# --- base / boot
+linux-image-amd64
+live-boot
+systemd-sysv
+libpam-systemd
+udev
+kmod
+dbus
+login
+bash-completion
+less
+nano
+ca-certificates
+locales
+
+# --- firmware: as wide as possible so the installer works on any PC
+firmware-linux-free
+firmware-misc-nonfree
+firmware-amd-graphics
+firmware-intel-graphics
+firmware-nvidia-graphics
+firmware-realtek
+firmware-iwlwifi
+firmware-atheros
+firmware-brcm80211
+firmware-mediatek
+firmware-bnx2
+firmware-bnx2x
+firmware-libertas
+firmware-sof-signed
+intel-microcode
+amd64-microcode
+
+# --- network
+network-manager
+wpasupplicant
+iw
+wireless-regdb
+iproute2
+iputils-ping
+
+# --- graphical session (Wayland kiosk) + GTK4 / libadwaita
+cage
+libgl1-mesa-dri
+libegl1
+mesa-vulkan-drivers
+xwayland
+fonts-cantarell
+fonts-dejavu-core
+adwaita-icon-theme
+python3
+python3-gi
+gir1.2-gtk-4.0
+gir1.2-adw-1
+
+# --- hardware detection
+pciutils
+usbutils
+dmidecode
+acpica-tools
+
+# --- disk writing
+gdisk
+parted
+dosfstools
+util-linux
+efibootmgr
+e2fsprogs

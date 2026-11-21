@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "host": "fixture",
+  "machine": {
+    "vendor": "MSI",
+    "product": "PRO Z690-A",
+    "board_vendor": "MSI",
+    "board_name": "PRO Z690-A (MS-7D25)",
+    "bios_version": "1.0",
+    "chassis_type": 3,
+    "form_factor": "desktop",
+    "battery": false,
+    "virtual": null,
+    "firmware": "uefi",
+    "secure_boot": false,
+    "memory_gb": 16
+  },
+  "cpu": {
+    "vendor": "intel",
+    "name": "12th Gen Intel(R) Core(TM) i5-12600K",
+    "family": 6,
+    "model": 151,
+    "stepping": 2,
+    "cores": 10,
+    "threads": 20,
+    "flags": [
+      "avx",
+      "avx2",
+      "sse4_1",
+      "sse4_2"
+    ],
+    "cfg_lock": null
+  },
+  "pci": [
+    {
+      "slot": "0000:00:02.0",
+      "vendor": "8086",
+      "device": "4680",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "Intel AlderLake-S GT1",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x2,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:03:00.0",
+      "vendor": "1002",
+      "device": "73ff",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "AMD Navi 23 [Radeon RX 6600]",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:1f.0",
+      "vendor": "8086",
+      "device": "7a84",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "060100",
+      "kind": "isa",
+      "name": "Intel Z690 Chipset LPC/eSPI Controller",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1f,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:04:00.0",
+      "vendor": "8086",
+      "device": "15f3",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "020000",
+      "kind": "ethernet",
+      "name": "Intel Ethernet Controller I225-V",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:14.3",
+      "vendor": "8086",
+      "device": "7af0",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "028000",
+      "kind": "wifi",
+      "name": "Intel Alder Lake-S PCH CNVi WiFi",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x14,0x3)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:14.0",
+      "vendor": "8086",
+      "device": "7ae0",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "0c0330",
+      "kind": "usb",
+      "name": "Intel Alder Lake-S PCH USB 3.2 xHCI",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x14,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:03:00.1",
+      "vendor": "1002",
+      "device": "ab28",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "040300",
+      "kind": "audio",
+      "name": "AMD Navi 21/23 HDMI/DP Audio",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x1)",
+      "boot_vga": false
+    }
+  ],
+  "usb": [
+    {
+      "vendor": "8087",
+      "product": "0026",
+      "name": "Intel Bluetooth",
+      "class": "e0",
+      "interfaces": [
+        "e0"
+      ]
+    },
+    {
+      "vendor": "0bda",
+      "product": "b00a",
+      "name": "Realtek Bluetooth Radio",
+      "class": "e0",
+      "interfaces": [
+        "e0"
+      ]
+    }
+  ],
+  "usb_ports": {
+    "0000:00:14.0": 26
+  },
+  "thunderbolt": false,
+  "audio_codecs": [
+    {
+      "card": 0,
+      "name": "Realtek ALC897",
+      "vendor_id": "0x10ec0897",
+      "applealc": "ALC897"
+    }
+  ],
+  "input": {
+    "ps2": false,
+    "i2c_hid": false
+  },
+  "acpi": {
+    "dsdt_available": false,
+    "names": []
+  },
+  "nics": []
+}

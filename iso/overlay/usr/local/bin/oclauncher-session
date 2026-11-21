@@ -1,0 +1,28 @@
+#!/bin/bash
+# Start the installer full-screen in the cage Wayland kiosk compositor.
+# Falls back to software rendering on VMs, unknown GPUs or the "safe graphics" boot entry.
+
+export XDG_RUNTIME_DIR=/run/user/0
+mkdir -p "$XDG_RUNTIME_DIR" && chmod 700 "$XDG_RUNTIME_DIR"
+# Not under /run: it is mounted noexec (macserial/ocvalidate must run) and is only 10% of RAM.
+export OCL_CACHE=/var/lib/oclauncher/cache
+export OCL_WORKDIR=/var/lib/oclauncher/work
+export PYTHONPATH=/opt/oclauncher
+export GDK_BACKEND=wayland
+export WLR_NO_HARDWARE_CURSORS=1
+export WLR_LIBINPUT_NO_DEVICES=1
+mkdir -p "$OCL_CACHE" "$OCL_WORKDIR"
+
+software=0
+grep -q "oclauncher.safegfx\|nomodeset" /proc/cmdline && software=1
+[ "$(systemd-detect-virt 2>/dev/null)" != "none" ] && software=1
+ls /dev/dri/card* >/dev/null 2>&1 || software=1
+
+run() { cage -d -s -- python3 -m oclauncher gui; }
+
+if [ "$software" = 1 ]; then
+    export WLR_RENDERER=pixman GSK_RENDERER=cairo
+    run
+else
+    run || { echo "Retrying with software rendering..."; WLR_RENDERER=pixman GSK_RENDERER=cairo run; }
+fi

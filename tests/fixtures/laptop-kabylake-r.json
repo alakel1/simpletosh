@@ -1,0 +1,158 @@
+{
+  "schema": 1,
+  "host": "fixture",
+  "machine": {
+    "vendor": "Dell Inc.",
+    "product": "XPS 13 9370",
+    "board_vendor": "Dell Inc.",
+    "board_name": "0F6P3V",
+    "bios_version": "1.0",
+    "chassis_type": 10,
+    "form_factor": "laptop",
+    "battery": true,
+    "virtual": null,
+    "firmware": "uefi",
+    "secure_boot": false,
+    "memory_gb": 16
+  },
+  "cpu": {
+    "vendor": "intel",
+    "name": "Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz",
+    "family": 6,
+    "model": 142,
+    "stepping": 10,
+    "cores": 4,
+    "threads": 8,
+    "flags": [
+      "avx",
+      "avx2",
+      "sse4_1",
+      "sse4_2"
+    ],
+    "cfg_lock": null
+  },
+  "pci": [
+    {
+      "slot": "0000:00:02.0",
+      "vendor": "8086",
+      "device": "5917",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "030000",
+      "kind": "display",
+      "name": "Intel UHD Graphics 620",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x2,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:1f.0",
+      "vendor": "8086",
+      "device": "9d4e",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "060100",
+      "kind": "isa",
+      "name": "Intel Sunrise Point LPC",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1f,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:02:00.0",
+      "vendor": "8086",
+      "device": "24fd",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "028000",
+      "kind": "wifi",
+      "name": "Intel Wireless 8265 / 8275",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:00:14.0",
+      "vendor": "8086",
+      "device": "9d2f",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "0c0330",
+      "kind": "usb",
+      "name": "Intel Sunrise Point-LP USB 3.0 xHCI",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x14,0x0)",
+      "boot_vga": false
+    },
+    {
+      "slot": "0000:03:00.0",
+      "vendor": "10ec",
+      "device": "525a",
+      "subsys_vendor": "0000",
+      "subsys_device": "0000",
+      "class": "ff0000",
+      "kind": "cardreader",
+      "name": "Realtek RTS525A PCI Express Card Reader",
+      "driver": null,
+      "path": "PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)",
+      "boot_vga": false
+    }
+  ],
+  "usb": [
+    {
+      "vendor": "8087",
+      "product": "0a2b",
+      "name": "Intel Bluetooth",
+      "class": "e0",
+      "interfaces": [
+        "e0"
+      ]
+    },
+    {
+      "vendor": "0c45",
+      "product": "6713",
+      "name": "Microdia Integrated_Webcam_HD",
+      "class": "ef",
+      "interfaces": [
+        "0e"
+      ]
+    },
+    {
+      "vendor": "0c45",
+      "product": "6714",
+      "name": "Microdia Integrated IR Camera",
+      "class": "ef",
+      "interfaces": [
+        "0e"
+      ]
+    },
+    {
+      "vendor": "27c6",
+      "product": "5385",
+      "name": "Goodix Fingerprint",
+      "class": "ff",
+      "interfaces": [
+        "ff"
+      ]
+    }
+  ],
+  "usb_ports": {},
+  "thunderbolt": false,
+  "audio_codecs": [
+    {
+      "card": 0,
+      "name": "Realtek ALC256",
+      "vendor_id": "0x10ec0256",
+      "applealc": "ALC256"
+    }
+  ],
+  "input": {
+    "ps2": true,
+    "i2c_hid": true
+  },
+  "acpi": {
+    "dsdt_available": false,
+    "names": []
+  },
+  "nics": []
+}
