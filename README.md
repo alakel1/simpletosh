@@ -12,6 +12,35 @@ A guided, hardware-aware installer that prepares **OpenCore + the macOS installe
 Welcome → Hardware → macOS versions → What to expect → Setup review → Destination → Confirm → Install → Done
 ```
 
+<table>
+  <tr>
+    <td><img src="docs/screenshots/welcome.png" alt="Welcome page"></td>
+    <td><img src="docs/screenshots/hardware.png" alt="Hardware analysis: each component with its macOS support"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Welcome</sub></td>
+    <td align="center"><sub>Hardware analysis</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/versions.png" alt="macOS versions that this hardware can run, with a recommendation"></td>
+    <td><img src="docs/screenshots/expect.png" alt="What will work, what is uncertain and what will not work"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Installable macOS versions</sub></td>
+    <td align="center"><sub>What to expect</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/config.png" alt="Setup review: SMBIOS, kexts and settings, each with a reason"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Setup review</sub></td>
+    <td></td>
+  </tr>
+</table>
+
+<sub>Screenshots taken with a sample hardware report (Z390 + i7-8700K), not a real user's PC.</sub>
+
 1. **Hardware analysis** reads everything from `/proc` and `/sys`:
    - CPU, GPUs, analog codecs and HDMI/DP audio;
    - Ethernet, Wi‑Fi and Bluetooth;
