@@ -10,6 +10,7 @@ The EFI partition is expected to be the first partition (as written by OpenCore 
 """
 
 import argparse
+import json
 import os
 import plistlib
 import shutil
@@ -28,24 +29,42 @@ def run(cmd, **kw):
     return r.stdout
 
 
-def esp_offset(raw):
-    out = run(["sgdisk" if shutil.which("sgdisk") else "/usr/sbin/sgdisk", "-i", "1", raw])
-    for line in out.splitlines():
-        if line.startswith("First sector:"):
-            return int(line.split()[2]) * 512
-    sys.exit("cannot find the EFI partition")
+def first_partition(gpt):
+    """(first LBA, sector count) of GPT partition 1, from the first 34 sectors of the disk."""
+    if gpt[512:520] != b"EFI PART":
+        sys.exit("no GPT partition table on this disk")
+    entries_lba = int.from_bytes(gpt[512 + 72:512 + 80], "little")
+    e = gpt[entries_lba * 512:entries_lba * 512 + 128]
+    first, last = int.from_bytes(e[32:40], "little"), int.from_bytes(e[40:48], "little")
+    if not first:
+        sys.exit("cannot find the EFI partition")
+    return first, last - first + 1
 
 
 class Image:
+    """Only the EFI partition (a few hundred MB) is copied out and back: never the whole disk."""
+
     def __init__(self, disk):
         self.disk = disk
-        self.qcow = run(["qemu-img", "info", "--output=json", disk]).count('"format": "qcow2"') > 0
+        info = json.loads(run(["qemu-img", "info", "-U", "--output=json", disk]))
+        self.fmt = info["format"]
         self.tmp = tempfile.mkdtemp(prefix="vmcfg-")
-        self.raw = disk
-        if self.qcow:
-            self.raw = os.path.join(self.tmp, "disk.raw")
-            run(["qemu-img", "convert", "-O", "raw", disk, self.raw])     # fails if the VM is running
-        self.img = f"{self.raw}@@{esp_offset(self.raw)}"
+        try:
+            self._extract(disk)
+        except BaseException:
+            self.close()
+            raise
+
+    def _extract(self, disk):
+        gpt = os.path.join(self.tmp, "gpt.bin")
+        # qemu-img takes a write lock check here too, so this fails cleanly if the VM is running
+        run(["qemu-img", "dd", "-f", self.fmt, "-O", "raw", "bs=512", "count=34", f"if={disk}", f"of={gpt}"])
+        with open(gpt, "rb") as f:
+            self.first, self.count = first_partition(f.read())
+        self.esp = os.path.join(self.tmp, "esp.img")
+        run(["qemu-img", "dd", "-f", self.fmt, "-O", "raw", "bs=512", f"skip={self.first}",
+             f"count={self.count}", f"if={disk}", f"of={self.esp}"])
+        self.img = self.esp
 
     def read(self):
         path = os.path.join(self.tmp, "config.plist")
@@ -58,9 +77,13 @@ class Image:
         with open(path, "wb") as f:
             plistlib.dump(config, f)
         run(["mcopy", "-o", "-i", self.img, path, "::/EFI/OC/config.plist"])
-        if self.qcow:
-            run(["qemu-img", "convert", "-O", "qcow2", self.raw, self.disk + ".new"])
-            os.replace(self.disk + ".new", self.disk)
+        self.flush()
+
+    def flush(self):
+        """Write the modified EFI partition back in place (a raw window over the disk image)."""
+        target = (f"driver=raw,offset={self.first * 512},size={self.count * 512},"
+                  f"file.driver={self.fmt},file.file.driver=file,file.file.filename={self.disk}")
+        run(["qemu-img", "convert", "-n", "-f", "raw", self.esp, "--target-image-opts", target])
 
     def close(self):
         shutil.rmtree(self.tmp, ignore_errors=True)
